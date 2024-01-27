@@ -143,7 +143,7 @@ section {
     font-family: Monserat;
     margin-top: 3rem;
     margin-bottom: 4rem;
-    opacity: 1;
+    opacity: 0;
 }
 
 section h2 {
@@ -252,7 +252,43 @@ footer .navigation {
     gap: 10px;
 }
 
+.element {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: blue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
 
+.big-element {
+    position: fixed;
+    width: fit-content;
+    height: fit-content;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0;
+    transition: all ease 1s;
+    cursor: pointer;
+}
+
+.move {
+    opacity: 1;
+    transition: all ease 1s;
+}
+
+.aha {
+   margin-top: 6rem;
+   opacity: 1;
+   transition: all ease 0.5s;
+}
+
+.border{
+    height: 70px;
+}
 
 @media screen and (width < 700px) {
     header{
@@ -305,38 +341,10 @@ footer .navigation {
         width: 30px;
         height: 30px;
     }
+    .border {
+        height: 50px;
+    }
 }
 
-.element {
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-    background-color: blue;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
 
-.big-element {
-    position: fixed;
-    width: fit-content;
-    height: fit-content;
-    bottom: 10px;
-    right: 10px;
-    opacity: 0;
-    transition: all ease 1s;
-    cursor: pointer;
-}
-
-.move {
-    opacity: 1;
-    transition: all ease 1s;
-}
-
-.aha {
-   margin-top: 6rem;
-   transition: all ease 0.5s;
-}
 

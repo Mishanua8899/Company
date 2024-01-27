@@ -51,20 +51,26 @@ function Callback(){
         
 }
 
+
+
+function Callback2(entries, observer){
+    entries.forEach(elem => {
+        if(elem.isIntersecting){
+        console.log('working')
+        elem.target.classList.add('aha')
+        }
+    });
+}
+
 const options2 = {
-    threshold:0,
-    rootMargin:'-300px',
+    threshold:0.5,
+    rootMargin:'0px',
 }
 
-const section = document.querySelector('#section')
-const observer2 = new IntersectionObserver(Callback2, options)
-observer2.observe(section)
-
-function Callback2() {
-    if(section.isIntersecting)
-    console.log('working')
-    section.classList.add('aha')
-    
-}
+const section = document.querySelectorAll('section')
+const observer2 = new IntersectionObserver(Callback2, options2)
+section.forEach((box) => {
+    observer2.observe(box);
+});
 
 
